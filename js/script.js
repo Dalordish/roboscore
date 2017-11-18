@@ -33,7 +33,6 @@ function newRound() { //handler for the end of the round ( t = 0 or endround pre
     else {
       newEvent("End of Round!");
     }  
-    
   }
   else {
     roundStatus.textContent = "Game over!"
@@ -43,7 +42,6 @@ function newRound() { //handler for the end of the round ( t = 0 or endround pre
     isGameOver = true;
     currentRound = 0
   }
-  
 }
 function timerFunction() { //main timer clock function call
   if (timeLeft <= 0) {
