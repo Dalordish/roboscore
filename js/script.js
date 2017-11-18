@@ -42,13 +42,15 @@ function newRound() { //handler for the end of the round ( t = 0 or endround pre
   }
   
 }
-function timerCallback() { //main timer clock function call
+function timerFunction() { //main timer clock function call
   if (timeLeft <= 0) {
     newRound();
   }
   else {
+    timerClock = setTimeout(timerFunction,100)
     console.log(timeLeft -= 1);
     updateTime();
+    
   } 
 }
 function updateTime() {
@@ -81,7 +83,7 @@ stopButton.addEventListener("mouseup", function(event) {
 });
 
 function startClock() { //main timer clock start
-  timerClock = window.setInterval(timerCallback,100);
+  timerClock = window.setTimeout(timerFunction,100);
 }
 
 function pauseClock() { //main timer clock pause
