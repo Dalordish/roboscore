@@ -5,6 +5,9 @@ var t1Score = 0;
 var t2Score = 0;
 var formattedTimer = "5:00"
 var currentRound = 1;
+var roundTimeMax = 300;
+var breakTimeMax = 45;
+var timeoutTimeMax = 45;
 console.log("loaded js");
 
 var isGameOver = false;
@@ -17,7 +20,7 @@ function newRound() { //handler for the end of the round ( t = 0 or endround pre
   if (currentRound < 3) {
     document.getElementById("stopButton").textContent = "End Round"; 
     roundStatus.textContent = "Round " + currentRound;
-    timeLeft = 300;
+    timeLeft = roundTimeMax;
     startPauseButton.textContent = "Start";
     updateTime();
     if (isGameOver) {
@@ -190,7 +193,7 @@ tOneTimeoutOne.addEventListener("mouseup", function(event) {
   }
   else {
     t1Bot1On = true;
-    this.textContent = "60";
+    this.textContent = timeoutTimeMax;
     console.log("t11out");
     newEvent("Team 1 Bot 1 damaged!");
     window.setTimeout(botTimeout.bind(this),100);
@@ -204,7 +207,7 @@ tOneTimeoutTwo.addEventListener("mouseup", function(event) {
   }
   else {
     t1Bot2On = true;
-    this.textContent = "60";
+    this.textContent = timeoutTimeMax;
     newEvent("Team 1 Bot 2 damaged!");
     window.setTimeout(botTimeout.bind(this),100);
   }
@@ -217,7 +220,7 @@ tTwoTimeoutOne.addEventListener("mouseup", function(event) {
   }
   else {
     t2Bot1On = true;
-    this.textContent = "60";
+    this.textContent = timeoutTimeMax;
     newEvent("Team 2 Bot 1 damaged!");
     window.setTimeout(botTimeout.bind(this),100);
   }
@@ -230,9 +233,26 @@ tTwoTimeoutTwo.addEventListener("mouseup", function(event) {
   }
   else {
     t2Bot2On = true;
-    this.textContent = "60";
+    this.textContent = timeoutTimeMax;
     newEvent("Team 2 Bot 2 damaged!");
     window.setTimeout(botTimeout.bind(this),100);
   }
 });
 
+//settings
+
+settingsSave.addEventListener("mouseup", function(event) {
+  console.log("hi!")
+  console.log(team1NameIn.value)
+  console.log(team2NameIn.value)
+  console.log(roundTimeIn.value)
+  console.log(timeoutTimeIn.value)
+  console.log(breakTimeIn.value)
+  document.getElementById("team1Name").innerText = team1NameIn.value
+  document.getElementById("team2Name").innerText = team2NameIn.value
+  breakTimeMax=  breakTimeIn.value
+  timeoutTimeMax = timeoutTimeIn.value
+  roundTimeMax = roundTimeIn.value
+  timeLeft = roundTimeMax
+  updateTime();
+});

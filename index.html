@@ -56,7 +56,7 @@
     <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
       <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">MHS Soccer Scoreboard v0.02 | Time sped up 10x [Now with working responsive design!] </span>
+          <span class="mdl-layout-title">MHS Soccer Scoreboard v0.02 | Time sped up 10x [Now with working settings!] </span>
           <div class="mdl-layout-spacer"></div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
             <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
@@ -75,8 +75,8 @@
           <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
           <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
             <div class="mdl-grid">
-              <div class = "mdl-shadow--2dp md-cell md-cell--12-col mdl-grid">
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet	 black-border text-center aligner "> <h2 class = "aligner title-text"> Mega Super Ultra Meme <h2> </div>
+              <div class = "mdl-shadow--2dp md-cell md-cell--12-col mdl-grid titlecard">
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet	 black-border text-center aligner "> <h2 class = "aligner title-text" id = "team1Name"> Mega Super Ultra Meme <h2> </div>
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet	 black-border">
                   <div class = "text-center" id = "roundStatus">
                     Round 1
@@ -85,7 +85,7 @@
                     <h2 class = "aligner timer-text" id = "timerText" >5:00 </h2>
                   </div> 
                 </div>
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet	 black-border text-center aligner"> <h2 class = "aligner title-text"> Steel bar covering Window </h2> </div>
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet	 black-border text-center aligner"> <h2 class = "aligner title-text" id = "team2Name"> Steel bar covering Window </h2> </div>
               </div>
                 <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--hide-phone mdl-cell--hide-tablet	 black-border text-center">
                 <!--desktop spacer  -->
@@ -154,7 +154,7 @@
         </footer>
       </main>
     </div>
-    <button id="show-dialog" type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">NON-FUNCTIONAL [SETTINGS]</button>
+    <button id="show-dialog" type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">SETTINGS</button>
   
   
 <!-- needs a lot of cleaning up, but good enough for first contact -->  
@@ -162,34 +162,34 @@
     <h4 class="mdl-dialog__title">Custom Settings</h4>
     <div class="mdl-dialog__content">
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input class="mdl-textfield__input" type="text" id="team1NameIn" placeholder="Team 1">
+        <input class="mdl-textfield__input" type="text" id="team1NameIn" value="Team 1">
         <label class="mdl-textfield__label" for="team1NameIn">Team 1 Name</label>
       </div>
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input class="mdl-textfield__input" type="text" id="team2NameIn" placeholder="Team 2">
-        <label class="mdl-textfield__label" for="team1NameIn">Team 2 Name</label>
+        <input class="mdl-textfield__input" type="text" id="team2NameIn" value="Team 2">
+        <label class="mdl-textfield__label" for="team2NameIn">Team 2 Name</label>
       </div>
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input class="mdl-textfield__input" type="text" id="team2NameIn" placeholder="300">
-        <label class="mdl-textfield__label" for="team1NameIn">Round time in seconds</label>
+        <input class="mdl-textfield__input" type="text" id="roundTimeIn" value="300">
+        <label class="mdl-textfield__label" for="roundTimeIn">Round time in seconds</label>
       </div>
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input class="mdl-textfield__input" type="text" id="team2NameIn" placeholder="60">
-        <label class="mdl-textfield__label" for="team1NameIn">Break Time in seconds</label>
+        <input class="mdl-textfield__input" type="text" id="breakTimeIn" value="60">
+        <label class="mdl-textfield__label" for="breakTimeIn">Break Time in seconds</label>
       </div>
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input class="mdl-textfield__input" type="text" id="team2NameIn" placeholder="45">
-        <label class="mdl-textfield__label" for="team1NameIn">Bot Timeout time in seconds</label>
+        <input class="mdl-textfield__input" type="text" id="timeoutTimeIn" value="45">
+        <label class="mdl-textfield__label" for="timeoutTimeIn">Bot Timeout time in seconds</label>
       </div>
     </div>
     <div class="mdl-dialog__actions">
-      <button type="button" class="mdl-button">Save</button>
-      <button type="button" class="mdl-button close">Cancel</button>
+      <button type="button" class="mdl-button close" id = "settingsSave">Save</button>
+      <button type="button" class="mdl-button close2">Cancel</button>
     </div>
   </dialog>
 
 
-
+<!-- big ol mess that needs cleanup -->
   <script>
     var dialog = document.querySelector('dialog');
     var showDialogButton = document.querySelector('#show-dialog');
@@ -200,6 +200,9 @@
       dialog.showModal();
     });
     dialog.querySelector('.close').addEventListener('click', function() {
+      dialog.close();
+    });
+    dialog.querySelector('.close2').addEventListener('click', function() {
       dialog.close();
     });
   </script>
