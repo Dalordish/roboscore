@@ -113,7 +113,7 @@ addTOneScore.addEventListener("mouseup", function(event) {
   console.log("t1+");
   t1Score += 1;
   updateScores();
-  newEvent("Goal for team 1!");
+  newEvent("Goal for team 1");
 });
 
 minusTOneScore.addEventListener("mouseup", function(event) {
