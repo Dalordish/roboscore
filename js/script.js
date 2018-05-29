@@ -207,7 +207,7 @@ tOneTimeoutTwo.addEventListener("mouseup", function(event) {
     t1Bot2On = true;
     this.textContent = timeoutTimeMax;
     newEvent("Team 1 Bot 2 damaged!");
-    window.setTimeout(botTimeout.bind(this),100);
+    window.setTimeout(botTimeout.bind(this),1000);
   }
 });
 
