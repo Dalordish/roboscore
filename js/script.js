@@ -48,7 +48,7 @@ function timerFunction() { //main timer clock function call
     newRound();
   }
   else {
-    timerClock = setTimeout(timerFunction,100)
+    timerClock = setTimeout(timerFunction,1000)
     console.log(timeLeft -= 1);
     updateTime();
     
@@ -84,7 +84,7 @@ stopButton.addEventListener("mouseup", function(event) {
 });
 
 function startClock() { //main timer clock start
-  timerClock = window.setTimeout(timerFunction,100);
+  timerClock = window.setTimeout(timerFunction,1000);
 }
 
 function pauseClock() { //main timer clock pause
@@ -142,7 +142,7 @@ function botTimeout() {
   this.textContent -= 1 //storing the data in a DOM for convenience sake
   time = parseInt(this.textContent)
   if (time > 0) { //If not done
-    window.setTimeout(botTimeout.bind(this),100);
+    window.setTimeout(botTimeout.bind(this),1000);
     if (time < 10) {
       if (time % 2) {
         this.classList.add("mdl-button--colored-red-500");
@@ -194,7 +194,7 @@ tOneTimeoutOne.addEventListener("mouseup", function(event) {
     this.textContent = timeoutTimeMax;
     console.log("t11out");
     newEvent("Team 1 Bot 1 damaged!");
-    window.setTimeout(botTimeout.bind(this),100);
+    window.setTimeout(botTimeout.bind(this),1000);
   }
 });
 
@@ -220,7 +220,7 @@ tTwoTimeoutOne.addEventListener("mouseup", function(event) {
     t2Bot1On = true;
     this.textContent = timeoutTimeMax;
     newEvent("Team 2 Bot 1 damaged!");
-    window.setTimeout(botTimeout.bind(this),100);
+    window.setTimeout(botTimeout.bind(this),1000);
   }
 });
 
@@ -233,7 +233,7 @@ tTwoTimeoutTwo.addEventListener("mouseup", function(event) {
     t2Bot2On = true;
     this.textContent = timeoutTimeMax;
     newEvent("Team 2 Bot 2 damaged!");
-    window.setTimeout(botTimeout.bind(this),100);
+    window.setTimeout(botTimeout.bind(this),1000);
   }
 });
 
