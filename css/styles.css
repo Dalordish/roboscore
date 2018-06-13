@@ -14,6 +14,13 @@
  * limitations under the License.
  */
 .container { width: @container-desktop !important; }
+
+.score-button {
+  margin:3px;
+}
+.timeout-button {
+  margin:3px;
+}
 /** MDL TEMPLATE CODE **/
 .demo-ribbon {
   width: 100%;

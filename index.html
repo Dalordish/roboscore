@@ -58,7 +58,7 @@
     <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
       <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">MHS Soccer Scoreboard v0.02 |Test 1| Time sped up 10x [Now with working settings!] </span>
+          <span class="mdl-layout-title">MHS Soccer Scoreboard </span>
           <div class="mdl-layout-spacer"></div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
             <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
@@ -78,7 +78,7 @@
           <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
             <div class="mdl-grid">
               <div class = "mdl-shadow--2dp md-cell md-cell--12-col mdl-grid titlecard">
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet	 black-border text-center aligner "> <h2 class = "aligner title-text" id = "team1Name"> Mega Super Ultra Meme <h2> </div>
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet	 black-border text-center aligner "> <h2 class = "aligner title-text" id = "team1Name"> Team One <h2> </div>
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet	 black-border">
                   <div class = "text-center" id = "roundStatus">
                     Round 1
@@ -87,15 +87,15 @@
                     <h2 class = "aligner timer-text" id = "timerText" >5:00 </h2>
                   </div> 
                 </div>
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet	 black-border text-center aligner"> <h2 class = "aligner title-text" id = "team2Name"> Steel bar covering Window </h2> </div>
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet	 black-border text-center aligner"> <h2 class = "aligner title-text" id = "team2Name"> Team Two </h2> </div>
               </div>
                 <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--hide-phone mdl-cell--hide-tablet	 black-border text-center">
                 <!--desktop spacer  -->
               </div>
               <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet black-border text-center">
                 <div> 
-                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-color--green-400" id = "startPauseButton"> Start </button> 
-                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" id = "stopButton"> END ROUND </button>
+                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-color--green-400 mdl-js-ripple-effect" id = "startPauseButton"> Start </button> 
+                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect" id = "stopButton"> END ROUND </button>
                 </div>
                 <h2 class = "score-text text-center" id = "scoreBoard"> 0:0 </h2>
                 </div>
@@ -106,15 +106,15 @@
                 <div class = "">
                   <h2 class = "team-text"> Team 1 </h2>
                   <h2 class = "team-text-headers"> Score </h2>
-                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-color--green-400 " id = "addTOneScore"> + </button>
-                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" id = "minusTOneScore"> - </button>
+                  <button class="score-button mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-color--green-400 mdl-js-ripple-effect" id = "addTOneScore"> + </button>
+                  <button class="score-button mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect" id = "minusTOneScore"> - </button>
                   
                 </div>
                 <div>&nbsp; </div>
                 <div class = "">
                   <h2 class = "team-text-headers"> Timeouts </h2>
-                  <button class="mdl-button mdl-js-button mdl-button--fab" id = "tOneTimeoutOne" > 0 </button>
-                  <button class="mdl-button mdl-js-button mdl-button--fab" id = "tOneTimeoutTwo"> 0 </button>
+                  <button class="timeout-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id = "tOneTimeoutOne" > 0 </button>
+                  <button class="timeout-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id = "tOneTimeoutTwo"> 0 </button>
                 </div>
               </div>
               <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone	 mdl-cell--order-8-tablet mdl-cell--8-col-tablet mdl-cell--order-4-phone	 black-border text-center">
@@ -133,14 +133,14 @@
                 <div class = "">
                   <h2 class = "team-text"> Team 2 </h2>
                   <h2 class = "team-text-headers"> Score </h2>
-                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-color--green-400" id = "addTTwoScore"> + </button>
-                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" id = "minusTTwoScore"> - </button>
+                  <button class="score-button mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-color--green-400 mdl-js-ripple-effect" id = "addTTwoScore"> + </button>
+                  <button class="score-button mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect" id = "minusTTwoScore"> - </button>
                 </div>
                 <div>&nbsp; </div>
                 <div class = "">
                   <h2 class = "team-text-headers"> Timeouts </h2>
-                  <button class="mdl-button mdl-js-button mdl-button--fab" id = "tTwoTimeoutOne"> 0 </button>
-                  <button class="mdl-button mdl-js-button mdl-button--fab" id = "tTwoTimeoutTwo"> 0 </button>
+                  <button class="timeout-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id = "tTwoTimeoutOne"> 0 </button>
+                  <button class="timeout-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id = "tTwoTimeoutTwo"> 0 </button>
                 </div>
               </div>
             </div>
@@ -176,10 +176,10 @@
         <input class="mdl-textfield__input" type="text" id="roundTimeIn" value="300">
         <label class="mdl-textfield__label" for="roundTimeIn">Round time in seconds</label>
       </div>
-      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <!--<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <input class="mdl-textfield__input" type="text" id="breakTimeIn" value="60">
-        <label class="mdl-textfield__label" for="breakTimeIn">Break Time in seconds</label>
-      </div>
+        <label class="mdl-textfield__label" for="breakTimeIn">Break Time in seconds</label> 
+      </div>-->
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <input class="mdl-textfield__input" type="text" id="timeoutTimeIn" value="45">
         <label class="mdl-textfield__label" for="timeoutTimeIn">Bot Timeout time in seconds</label>

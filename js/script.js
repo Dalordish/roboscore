@@ -245,10 +245,10 @@ settingsSave.addEventListener("mouseup", function(event) {
   console.log(team2NameIn.value)
   console.log(roundTimeIn.value)
   console.log(timeoutTimeIn.value)
-  console.log(breakTimeIn.value)
+  //console.log(breakTimeIn.value)
   document.getElementById("team1Name").innerText = team1NameIn.value
   document.getElementById("team2Name").innerText = team2NameIn.value
-  breakTimeMax=  breakTimeIn.value
+  //breakTimeMax=  breakTimeIn.value
   timeoutTimeMax = timeoutTimeIn.value
   roundTimeMax = roundTimeIn.value
   timeLeft = roundTimeMax
