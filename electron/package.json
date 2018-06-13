@@ -1,0 +1,15 @@
+{
+  "name": "roboscore",
+  "version": "1.0.0",
+  "description": "robot soccer scoring system",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Richard Huang",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^2.0.2"
+  }
+}
