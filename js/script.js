@@ -9,7 +9,7 @@ var roundTimeMax = 300;
 var breakTimeMax = 45;
 var timeoutTimeMax = 45;
 console.log("loaded js");
-
+// This is a test comment for git
 var isGameOver = false;
 function newRound() { //handler for the end of the round ( t = 0 or endround pressed)
   pauseClock();
