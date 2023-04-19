@@ -10,6 +10,6 @@
   "author": "Richard Huang",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^11.5.0"
+    "electron": "^24.1.2"
   }
 }
